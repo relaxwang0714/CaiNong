@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">菜农</string>
+    <string name="choose_check">我已阅读，并同意《用户注册协议》</string>
+    <string name="checkphone_button">注册</string>
+    <string name="user_editText">请输入您的用户名</string>
+    <string name="pwd_editText">请输入密码</string>
+    <string name="login">登录</string>
+</resources>

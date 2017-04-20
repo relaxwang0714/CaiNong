@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal|center">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_income">
+        <TextView
+            android:id="@+id/return_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《"
+            android:textSize="12pt"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收入"
+            android:layout_centerInParent="true"
+            android:textSize="14pt"/>
+    </RelativeLayout>
+    <TextView
+        android:text="我的收入(元)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dip"
+        android:layout_below="@+id/title_income"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/money_income"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dip"
+        android:layout_below="@+id/money_income"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/moneycount_income"
+        android:textColor="@android:color/black"
+        android:textSize="36sp" />
+
+    <Button
+        android:text="查看交易明细"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/check_income"
+        android:background="@drawable/shape_1"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/moneycount_income"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:weightSum="1"
+        android:layout_below="@+id/check_income"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/tixian_income"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:text="提现"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFFAFA">
+
+            <TextView
+                android:id="@+id/yesterday_zhifu"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="8"
+                android:gravity="center_vertical"
+                android:text="昨日支出金额"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/money_zhifu"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="0.00"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:id="@+id/go_yesterdayzhifu"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=">"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="#FFFAFA">
+
+            <TextView
+                android:id="@+id/yesterday_tuikuan"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="8"
+                android:gravity="center_vertical"
+                android:text="昨日退款金额"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/money_tuikuan"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="0.00"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:id="@+id/go_yesterdaytuikuan"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=">"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="#FFFAFA">
+
+            <TextView
+                android:id="@+id/month_zhifu"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="8"
+                android:gravity="center_vertical"
+                android:text="30天支付金额"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/moneymonth_zhifu"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="0.00"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:text=">"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:gravity="right"
+                android:id="@+id/go_mounthzhifu"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="#FFFAFA">
+
+            <TextView
+                android:id="@+id/month_tuikuan"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="8"
+                android:gravity="center_vertical"
+                android:text="30天退款金额"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/moneymonth_tuikuan"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="0.00"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:text=">"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:gravity="right"
+                android:id="@+id/go_mounthtuikuan"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="#FFFAFA">
+
+            <TextView
+                android:id="@+id/pay_tool"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="8"
+                android:gravity="center_vertical"
+                android:text="绑定支付工具"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:text=">"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:gravity="right"
+                android:id="@+id/go_pay_tool"
+                android:layout_weight="1" />
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
